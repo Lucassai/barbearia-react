@@ -14,7 +14,7 @@ function Home() {
       <div className="bg-linear-to-t from-black to-(--dark-blue) min-h-screen">
         <div className="flex items-left">
           <h1 className="ml-10 shadow-sm shadow-blue-200 mt-10 max-w-2xl  text-3xl text-white p-3 font-bold mb-4 rounded-2xl">
-            💈Home
+            💈
           </h1>
         </div>
 
