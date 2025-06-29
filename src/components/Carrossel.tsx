@@ -18,9 +18,9 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({
     setCurrentIndex((prev) => (prev === images.length - 1 ? 0 : prev + 1))
   }
 
-  const prevSlide = () => {
+  /*   const prevSlide = () => {
     setCurrentIndex((prev) => (prev === 0 ? images.length - 1 : prev - 1))
-  }
+  } */
 
   const goToSlide = (index: number) => {
     setCurrentIndex(index)
@@ -42,7 +42,7 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({
 
   return (
     <div
-      className="relative ml-10 mr-10 mt-5 mb-5 w-full max-w-2xl overflow-hidden roudend-xl shadow-xl"
+      className="rounded-full bg-linear-to-t from-cyan-500 to-black relative ml-10 mr-10 mt-5 mb-5 w-full max-w-2xl overflow-hidden roudend-xl shadow-sm shadow-blue-300"
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
