@@ -1,4 +1,5 @@
 import ImageCarousel from '../components/Carrossel'
+import Footer from '../components/Footer'
 
 function Home() {
   const carouselImages = [
@@ -10,32 +11,35 @@ function Home() {
 
   return (
     <>
-      <div className="flex items-left bg-gray-800">
-        <h1 className="ml-10 mt-10 max-w-2xl  text-3xl text-emerald-100 p-3 font-bold mb-4 rounded-2xl">
-          💈Home
-        </h1>
-      </div>
+      <div className="bg-linear-to-t from-black to-(--dark-blue) min-h-screen">
+        <div className="flex items-left">
+          <h1 className="ml-10 shadow-sm shadow-blue-200 mt-10 max-w-2xl  text-3xl text-white p-3 font-bold mb-4 rounded-2xl">
+            💈Barber
+          </h1>
+        </div>
 
-      <div className="flex items-center justify-center">
-        <ImageCarousel
-          images={carouselImages}
-          autoPlay={true}
-          interval={3000}
-        />
-      </div>
-      <div className="flex flex-col items-left bg-gray-800">
-        <h1 className="ml-10 max-w-2xl  text-3xl text-emerald-100 p-3 font-bold mb-4 rounded-2xl">
-          Serviços
-        </h1>
-        <button className="bg-emerald-100 ml-10 mr-10 mb-4 p-3 rounded-2xl text-gray-800 font-bold hover:bg-emerald-200 hover:cursor-pointer transition-colors">
-          Corte Tradicional
-        </button>
-        <button className="bg-emerald-100 ml-10 mr-10 mb-4 p-3 rounded-2xl text-gray-800 font-bold hover:bg-emerald-200 hover:cursor-pointer transition-colors">
-          Limpeza de Pele
-        </button>
-        <button className="bg-emerald-100 ml-10 mr-10 mb-4 p-3 rounded-2xl text-gray-800 font-bold hover:bg-emerald-200 hover:cursor-pointer transition-colors">
-          Sobrancelha
-        </button>
+        <div className="flex items-center justify-center">
+          <ImageCarousel
+            images={carouselImages}
+            autoPlay={true}
+            interval={3000}
+          />
+        </div>
+        <div className="flex flex-col items-left">
+          <h1 className="ml-10 max-w-2xl  text-3xl text-(--light-blue) p-3 font-bold mb-4 rounded-2xl">
+            Serviços
+          </h1>
+          <button className="bg-(--dark-blue) ml-10 mr-10 shadow-blue-300 shadow-sm mb-4 p-3 rounded-2xl text-white font-bold hover:bg-(--light-blue) hover:cursor-pointer hover:text-black transition-colors">
+            Corte Tradicional
+          </button>
+          <button className="bg-(--dark-blue) ml-10 mr-10 shadow-blue-300 shadow-sm mb-4 p-3 rounded-2xl text-white font-bold hover:bg-(--light-blue) hover:cursor-pointer hover:text-black transition-colors">
+            Limpeza de Pele
+          </button>
+          <button className="bg-(--dark-blue) ml-10 mr-10 shadow-blue-300 shadow-sm mb-4 p-3 rounded-2xl text-white font-bold hover:bg-(--light-blue) hover:cursor-pointer hover:text-black transition-colors">
+            Sobrancelha
+          </button>
+        </div>
+        <Footer />
       </div>
     </>
   )
